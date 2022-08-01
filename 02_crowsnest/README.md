@@ -1,25 +1,25 @@
 # Crow's Nest
 
-https://www.youtube.com/playlist?list=PLhOuww6rJJNPBqIwfD-0RedqsitBliLhT
+<https://www.youtube.com/playlist?list=PLhOuww6rJJNPBqIwfD-0RedqsitBliLhT>
 
 Write a program that will announce the appearance of something "off the larboard bow" to the captain of the ship.
 Note that you need to "a" before a word starting with a consonant:
 
-```
+```powershell
 $ ./crowsnest.py narwhal
 Ahoy, Captain, a narwhal off the larboard bow!
 ```
 
 Or "an" before a word starting with a vowel:
 
-```
+```powershell
 $ ./crowsnest.py octopus
 Ahoy, Captain, an octopus off the larboard bow!
 ```
 
 Given no arguments, the program should print a brief usage:
 
-```
+```powershell
 $ ./crowsnest.py
 usage: crowsnest.py [-h] str
 crowsnest.py: error: the following arguments are required: str
@@ -27,7 +27,7 @@ crowsnest.py: error: the following arguments are required: str
 
 It should print a longer usage for `-h` and `--help`:
 
-```
+```powershell
 $ ./crowsnest.py -h
 usage: crowsnest.py [-h] str
 
@@ -42,7 +42,7 @@ optional arguments:
 
 A passing test suite looks like this:
 
-```
+```powershell
 $ make test
 pytest -xv test.py
 ============================= test session starts ==============================
