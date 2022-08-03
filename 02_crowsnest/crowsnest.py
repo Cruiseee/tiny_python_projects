@@ -13,13 +13,13 @@ def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Shout out to captain about incoming threat',
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+        description="Shout out to captain about incoming threat",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
 
-    parser.add_argument('word',
-                        metavar='threat',
-                        help='Incoming threat to ship',
-                        type=str)
+    parser.add_argument(
+        "word", metavar="threat", help="Incoming threat to ship", type=str
+    )
 
     return parser.parse_args()
 
@@ -31,16 +31,14 @@ def main():
     args = get_args()
     str_arg = args.word
 
-    str_arg = str_arg.lower()
-    
-    if str_arg[0] in 'aeiou':
-        article = 'an'
+    if str_arg[0].lower() in "aeiou":
+        article = "an"
     else:
-        article = 'a'
+        article = "a"
 
-    print(f'Ahoy, Captain, {article} {str_arg} off the larboard bow!')
+    print(f"Ahoy, Captain, {article} {str_arg} off the larboard bow!")
 
 
 # --------------------------------------------------
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
