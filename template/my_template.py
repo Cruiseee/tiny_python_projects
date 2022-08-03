@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Author : Me <me@foo.com>
+Author : Tanneeru Deepak <dangerousdeepak25@gmail.com>
 Date   : today
-Purpose: Rock the Casbah
+Purpose: Chapter- Solution
 """
 
 import argparse
@@ -13,8 +13,12 @@ def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Rock the Casbah',
+        description='Arguments extraction',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+    parser.add_argument('positional',
+                        metavar='str',
+                        help='A positional argument')
 
     parser.add_argument('-a',
                         '--arg',
